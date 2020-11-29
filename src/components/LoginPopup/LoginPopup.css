@@ -1,0 +1,51 @@
+.popup__field {
+  border: none;
+  padding: 0;
+}
+
+.popup__input-title {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2F71E5;
+  margin: 15px 0 8px;
+}
+
+.popup__input {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba( 0, 0, 0, 0.2);
+  box-sizing: border-box;
+  height: 35px;
+}
+
+.popup__input-error {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  margin: 3px 0 0;
+
+}
+
+
+/*.form__input-error {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  opacity: 0;
+  box-sizing: border-box;
+  height: 25px;
+}
+.form__input-error_active {
+  opacity: 1;
+}*/
