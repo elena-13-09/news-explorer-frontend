@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import buttonExitIcon from '../../images/button-exit.svg';
 import '../../blocks/color-theme/color-theme.css';
 import './Navigation.css';
@@ -21,12 +21,12 @@ function Navigation({ isThemeDark, isMenuMobile, onLoginClick, onMenuMobileClose
         onClick={onMenuMobileClose}
         className={`navigation__link ${(screenWidth <= 680) && isMenuMobile ? "color-theme_white" : isThemeDark ? "color-theme_dark" : "color-theme_white"}`}
         activeClassName="navigation__link_active" exact to="/">Главная
-          </NavLink>
+      </NavLink>
       <NavLink
         onClick={onMenuMobileClose}
         className={`navigation__link ${(screenWidth <= 680) && isMenuMobile ? "color-theme_white" : isThemeDark ? "color-theme_dark" : "color-theme_white"}`}
         activeClassName="navigation__link_active" to="/saved-news">Сохранённые статьи
-        </NavLink>
+      </NavLink>
     </>
   );
   const navMobile = (

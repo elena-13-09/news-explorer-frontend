@@ -1,8 +1,8 @@
 import React from 'react';
 import './PopupWithForm.css';
 
-function PopupWithForm({ name, isOpen, onSubmit, onClose, title, button, children, togglePopup, buttonLink, onOverlayClose, isValid, value }) {
-
+function PopupWithForm({ name, isOpen, onSubmit, onClose, title, button, children, togglePopup, buttonLink, onOverlayClose, isValid }) {
+  // закрытие попапов клавишей Escape
   function handleEscClose(e) {
     if (e.key === "Escape") {
       onClose();

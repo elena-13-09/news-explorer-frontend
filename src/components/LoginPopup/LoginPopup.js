@@ -2,9 +2,7 @@ import React from 'react';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import './LoginPopup.css';
 
-
 function LoginPopup({ isOpen, onClose, onChangeValid, togglePopup, onOverlayClose, inputValues, inputError, isValid }) {
-
   return (
     <PopupWithForm
       title="Вход"

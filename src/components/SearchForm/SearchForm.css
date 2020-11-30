@@ -151,13 +151,13 @@
 }
 
 @media screen and (max-width: 450px) {
-  .search__form {
+  .search-form {
     padding: 86px 16px 32px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .search__form {
+  .search-form {
     background: url(../../images/background-mobile.jpg) no-repeat;
     background-position: center;
     background-size: cover;

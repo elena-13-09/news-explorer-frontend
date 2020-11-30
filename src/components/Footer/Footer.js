@@ -5,6 +5,7 @@ import gitHubIcon from '../../images/github-icon.svg';
 import './Footer.css';
 
 function Footer() {
+  // скролл наверх
   function backToTop() {
     if (window.pageYOffset > 0) {
       window.scrollBy(0, -80);
