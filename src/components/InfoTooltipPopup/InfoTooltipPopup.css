@@ -1,0 +1,30 @@
+.popup__button-info {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2F71E5;
+  align-self: start;
+  margin-top: 5px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.popup__container_info {
+  margin-top: 250px;
+  padding: 43px 36px 51px;
+}
+
+@media screen and (max-width: 680px) {
+  .popup__container_info {
+    margin-top: 66px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popup__container_info {
+    margin-top: 56px;
+    padding: 16px 17px 0;
+  }
+}

@@ -24,7 +24,7 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   background: #FFFFFF;
-  margin-top: 207px;
+  margin-top: 150px;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -55,7 +55,7 @@
   cursor: pointer;
   outline: none;
   align-self: center;
-  margin: 24px 0 16px;
+  margin: 8px 0 16px;
 }
 
 .popup__button-submit:hover {
@@ -131,6 +131,16 @@
 .popup__button-link:hover {
   opacity: 0.8;
   transition: .2s ease-in;
+}
+
+.popup__error {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #FF0000;
+  margin: 17px 0 0;
 }
 
 @media screen and (max-width: 680px) {

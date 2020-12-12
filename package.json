@@ -19,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "scp -r ./build/* praktikum@130.193.51.189:/home/praktikum/news-explorer-frontend"
   },
   "eslintConfig": {
     "extends": [

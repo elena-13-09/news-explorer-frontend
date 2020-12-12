@@ -1,14 +1,49 @@
 import React from 'react';
 import NewsCardList from '../NewsCardList/NewsCardList';
-import cards from '../../utils/cards';
 import './SearchResult.css';
+import '../../blocks/block-hidden/block-hidden.css';
 
-function SearchResult() {
+function SearchResult({
+  articles,
+  onRegister,
+  loggedIn,
+  findMySevedArticles,
+  keyword,
+  mySavedArticles }) {
+
+  const [renderArticles, setRenderArticles] = React.useState([]);
+  const [isShowMoreButton, setShowMoreButton] = React.useState(true)
+
+  // отображаются 3 статьи
+  React.useEffect(() => {
+    setRenderArticles(articles.slice(0, 3));
+    if (articles.length === 3) {
+      setShowMoreButton(false);
+    } else {
+      setShowMoreButton(true);
+    }
+  }, [articles]);
+
+  // показать еще 3 статьи
+  function handleShowArticles() {
+    setRenderArticles(articles.slice(0, renderArticles.length + 3));
+    if (renderArticles.length >= articles.length - 3) {
+      setShowMoreButton(false);
+    }
+  }
   return (
-    <section className="search-result">
+    <section className={`${renderArticles.length > 0 ? "search-result" : "block-hidden"}`}>
       <h2 className="search-result__title">Результаты поиска</h2>
-      <NewsCardList cards={cards} isSavedNews={false} />
-      <button className="search-result__button">Показать ещё</button>
+      <NewsCardList
+        renderArticles={renderArticles}
+        isSavedNews={false}
+        onRegister={onRegister}
+        loggedIn={loggedIn}
+        keyword={keyword}
+        mySavedArticles={mySavedArticles}
+        findMySevedArticles={findMySevedArticles}
+      />
+      <button className={`${isShowMoreButton ? "search-result__button" : "block-hidden"}`} onClick={handleShowArticles}>Показать ещё</button>
     </section>
   );
 }

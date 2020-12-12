@@ -3,12 +3,20 @@ import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import './Header.css';
 import '../../blocks/color-theme/color-theme.css';
-import '../../blocks/block-hidden/block-hidden.css';
 
-function Header({ isThemeDark, onMenuMobileOpen, onMenuMobileClose, isMenuMobile, screenWidth, onLoginClick, isButtonHidden }) {
+function Header({
+  isThemeDark,
+  onMenuMobileOpen,
+  onMenuMobileClose,
+  isMenuMobile,
+  screenWidth,
+  onLoginClick,
+  isButtonHidden,
+  loggedIn,
+  onExitClick }) {
 
   const buttonMenuMobile = (
-    <button className={`header__button-menu ${isMenuMobile ? "header__button-menu_active" : isButtonHidden && "block-hidden"}`} type="button"
+    <button className={`header__button-menu ${isMenuMobile ? "header__button-menu_active" : isButtonHidden && "header__button-menu_hidden"}`} type="button"
       onClick={onMenuMobileOpen}>
       <span className={`header__button-line ${isThemeDark ? "color-theme_background-dark" : "color-theme_background-white"}`} />
       <span className={`header__button-line ${isThemeDark ? "color-theme_background-dark" : "color-theme_background-white"}`} />
@@ -20,7 +28,7 @@ function Header({ isThemeDark, onMenuMobileOpen, onMenuMobileClose, isMenuMobile
       <Link onClick={onMenuMobileClose}
         className={`header__title ${(screenWidth <= 680) && isMenuMobile ? "color-theme_white" : isThemeDark ? "color-theme_dark" : "color-theme_white"}`} to="/">NewsExplorer
       </Link>
-      {(screenWidth <= 680) && buttonMenuMobile}
+      {(screenWidth <= 680) && (buttonMenuMobile)}
       <Navigation
         onLoginClick={onLoginClick}
         isButtonHidden={isButtonHidden}
@@ -28,6 +36,8 @@ function Header({ isThemeDark, onMenuMobileOpen, onMenuMobileClose, isMenuMobile
         isThemeDark={isThemeDark}
         isMenuMobile={isMenuMobile}
         onMenuMobileClose={onMenuMobileClose}
+        loggedIn={loggedIn}
+        onExitClick={onExitClick}
       />
     </header>
   );

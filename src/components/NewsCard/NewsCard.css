@@ -8,12 +8,22 @@
   width: 400px;
 }
 
+.news-card__link {
+  text-decoration: none;
+  padding: 0 16px 0;
+}
+
+.news-card__link:hover {
+  background: rgba(245, 246, 247, 1);
+  transition: .2s ease-in;
+}
+
 .news-card__image {
   display: flex;
   height: 272px;
   width: 100%;
   border-radius: 10px 10px 0 0;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .news-card__keyword {
@@ -93,7 +103,7 @@
   background-color: #ffffff;
 }
 
-.news-card__button_bookmark:focus {
+.news-card__button_bookmark-saved {
   background: url(../../images/button-bookmark-marked.svg) no-repeat;
   background-position: center;
   background-color: #ffffff;
@@ -105,7 +115,7 @@
   font-size: 18px;
   line-height: 24px;
   color: #b6bcbf;
-  margin: 20px 24px 12px;
+  margin: 20px 0 12px;
 }
 
 .news-card__title {
@@ -114,7 +124,11 @@
   font-size: 26px;
   line-height: 30px;
   color: #1a1b22;
-  margin: 0 24px 16px;
+  margin: 0 0 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .news-card__text {
@@ -124,7 +138,7 @@
   line-height: 22px;
   color: #1a1b22;
   overflow: hidden;
-  margin: 0 24px;
+  margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -138,7 +152,11 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
   color: #b6bcbf;
-  margin: 10px 24px 24px;
+  overflow: hidden;
+  margin: 10px 0 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 @media screen and (max-width: 1300px) {
@@ -188,18 +206,15 @@
     right: 53px;
   }
   .news-card__date {
-    margin: 16px 16px 10px;
+    margin: 16px 0 10px;
   }
   .news-card__title {
     font-size: 22px;
     line-height: 24px;
-    margin: 0 16px 10px;
-  }
-  .news-card__text {
-    margin: 0 16px;
+    margin: 0 0 10px;
   }
   .news-card__source {
-    margin: 12px 16px 16px;
+    margin: 12px 0 16px;
   }
 }
 
@@ -245,9 +260,8 @@
   }
   .news-card__title {
     line-height: 26px;
-    margin: 0 16px 10px;
   }
   .news-card__source {
-    margin: 8px 16px 16px;
+    margin: 8px 0 16px;
   }
 }

@@ -13,6 +13,7 @@
   margin-right: 34px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .navigation__link:hover {
@@ -41,12 +42,10 @@
   border-radius: 100px;
   padding: 0 15px;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 19px;
   cursor: pointer;
   outline: none;
+  white-space: nowrap;
 }
 
 .navigation__button:hover {

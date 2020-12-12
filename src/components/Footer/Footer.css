@@ -1,9 +1,10 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 32px 104px 26px;
+  padding: 32px 0 26px;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: auto auto 0;
+  width: calc(100% - 208px);
 }
 
 .footer__copyright {
@@ -72,7 +73,8 @@
 
 @media screen and (max-width: 1000px) {
   .footer {
-    padding: 24px 40px 18px;
+    padding: 24px 0 18px;
+    width: calc(100% - 80px);
   }
 }
 
@@ -103,6 +105,7 @@
 @media screen and (max-width: 450px) {
   .footer {
     flex-direction: column-reverse;
-    padding: 20px 16px;
+    padding: 20px 0;
+    width: calc(100% - 32px);
   }
 }

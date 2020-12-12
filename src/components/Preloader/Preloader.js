@@ -1,12 +1,13 @@
 import React from 'react';
 import './Preloader.css';
+import '../../blocks/block-hidden/block-hidden.css';
 
-function Preloader() {
+function Preloader({ isPreloader }) {
   return (
-    <div className="preloader">
+    <section className={`${isPreloader ? "preloader" : "block-hidden"}`}>
       <i className="preloader__circle"></i>
       <p className="preloader__text">Идет поиск новостей...</p>
-    </div>
+    </section>
   );
 }
 

@@ -2,22 +2,34 @@ import React from 'react';
 import './NewsCardList.css';
 import NewsCard from '../NewsCard/NewsCard';
 
-function NewsCardList({ cards, isSavedNews }) {
+function NewsCardList({
+  renderArticles,
+  findMySevedArticles,
+  mySavedArticles,
+  onRegister,
+  loggedIn,
+  keyword }) {
+
   return (
-    <section className="news-card-list">
-      {cards.map((card, index) => (
+    <div className="news-card-list">
+      {renderArticles.map((article, index) => (
         <NewsCard
           key={index}
-          keyword={card.keyword}
-          title={card.title}
-          text={card.text}
-          date={card.date}
-          source={card.source}
-          image={card.image}
-          isSavedNews={isSavedNews}
+          keyword={keyword}
+          title={article.title}
+          text={article.description}
+          date={article.publishedAt}
+          source={article.source.name}
+          image={article.urlToImage}
+          link={article.url}
+          article={article}
+          findMySevedArticles={findMySevedArticles}
+          mySavedArticles={mySavedArticles}
+          onRegister={onRegister}
+          loggedIn={loggedIn}
         />
       ))}
-    </section>
+    </div>
   );
 }
 
