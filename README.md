@@ -14,4 +14,4 @@
 + *Функциональные компоненты*
 + *API*
 
-### [Ссылка](https://github.com/elena-13-09/news-explorer-api) на репозиторий бекэнда
+### [Ссылка](https://github.com/elena-13-09/news-explorer-api) на репозиторий бэкенда
