@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
+import { Route, Switch, Redirect, useHistory, useLocation } from 'react-router-dom';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Header from '../Header/Header';
@@ -42,6 +42,7 @@ function App() {
   const [screenWidth, setScreenWidth] = React.useState('');
 
   const history = useHistory();
+  const location = useLocation();
 
   // ширина экрана
   function updateScreenWidth() {
@@ -140,7 +141,6 @@ function App() {
     };
   }, []);
 
-  // Сохранение токена в локальное хранилище
   function tokenCheck() {
     const jwt = localStorage.getItem('jwt');
     if (jwt) {
@@ -153,7 +153,8 @@ function App() {
           setCurrentUser(user);
           setMySavedArticles(savedArticles.reverse(), token);
           setLoggedIn(true);
-          history.push('/');
+          if (location.pathname === '/saved-news')
+            history.push('/saved-news');
         })
         .catch((err) => {
           console.log(err);
@@ -220,6 +221,8 @@ function App() {
   // поиск статей
   function handleSearchNews(keyword) {
     setArticles([]);
+    localStorage.removeItem('articles');
+    localStorage.removeItem('keyword');
     setPreloader(true);
     setIsNoResult(false);
     NewsApi.getNewsArticle(keyword)
