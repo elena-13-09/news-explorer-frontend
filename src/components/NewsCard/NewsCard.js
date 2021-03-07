@@ -21,7 +21,7 @@ function NewsCard({
   // изменение формата даты
   function newDate() {
 
-    const formatDate = new Date();
+    const formatDate = new Date(date);
 
     const months = [
       'января',
