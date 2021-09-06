@@ -5,7 +5,7 @@
 *Репозиторий для API проекта News Explorer, включающий авторизацию и регистрацию пользователей, создание, получение и удаление новостных карточек.*
 
 ### Ссылка на проект
-***https://egoreva.students.nomoreparties.space***
+***https://diploma.goreva.nomoredomains.rocks***
 
 ### Для создания применялись технологии
 + *JSX*
